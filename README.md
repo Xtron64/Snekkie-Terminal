@@ -1,4 +1,3 @@
-## *Snekkie-Terminal*
 # What you can do with Snekkie-Terminal:
 - Use simple commands.
 - Create folders.
