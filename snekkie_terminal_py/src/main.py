@@ -3,14 +3,21 @@ import getpass
 import os
 
 
+def initBash():
+    os.system('exec bash')
+
 def userInput():
     _ = input("You: ")
     return _
 
 
 def getShell(): 
-    shell = os.environ['SHELL']
-    return shell
+    try:
+        shell = os.environ['SHELL']
+    except:
+        shell = '/bin/bash'
+    finally:
+        return shell
 
 
 def getShellSymbol():
@@ -39,6 +46,7 @@ def getPath():
 
 
 def main():
+    initBash()
     while True:
         path = getPath()
         shellSymbol = getShellSymbol()
